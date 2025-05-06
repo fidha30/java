@@ -1,7 +1,8 @@
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class sort {
+public class SortedArr {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -9,18 +10,18 @@ public class sort {
         int n = sc.nextInt();
         sc.nextLine(); 
 
-        String[] strings = new String[n];
-
+        String[] words = new String[n];
         System.out.println("Enter the strings:");
         for (int i = 0; i < n; i++) {
-            strings[i] = sc.nextLine();
+            words[i] = sc.nextLine();
         }
 
-        Arrays.sort(strings);
+        Arrays.sort(words);
 
-        System.out.println("Sorted strings in ascending order:");
-        for (String str : strings) {
-            System.out.println(str);
+
+        System.out.println("Sorted Array string:");
+        for (String word : words) {
+            System.out.println(word);
         }
 
         sc.close();

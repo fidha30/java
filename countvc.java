@@ -1,16 +1,17 @@
 import java.util.Scanner;
 
-public class vowels {
+public class countvc {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter a line of text: ");
-        String text = sc.nextLine().toLowerCase();
+        String text = scan.nextLine().toLowerCase(); 
 
         int vowels = 0, consonants = 0;
 
+        // Loop through each character in the string
         for (char ch : text.toCharArray()) {
-            if (ch >= 'a' && ch <= 'z') {
+            if (ch >= 'a' && ch <= 'z') { // Only consider letters
                 if ("aeiou".indexOf(ch) != -1) {
                     vowels++;
                 } else {
@@ -19,9 +20,9 @@ public class vowels {
             }
         }
 
-        System.out.println("Number of vowels: " + vowels);
-        System.out.println("Number of consonants: " + consonants);
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
 
-        sc.close();
+        scan.close();
     }
 }
